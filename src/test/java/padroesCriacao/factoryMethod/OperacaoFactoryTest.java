@@ -21,7 +21,7 @@ class OperacaoFactoryTest {
             IOperacao operacao = OperacaoFactory.obterOperacao("AplicarMulta");
             fail();
         } catch (IllegalArgumentException e) {
-            assertEquals("Operação Inválida", e.getMessage());
+            assertEquals("Operação inválida", e.getMessage());
         }
     }
 
