@@ -16,6 +16,6 @@ public abstract class HamburguerDecorator implements Ingrediente {
     public abstract String getAdicional();
 
     public String getIngredientes() {
-        return this.ingrediente.getIngredientes() + this.getAdicional();
+        return this.ingrediente.getIngredientes() +", "+ this.getAdicional();
     }
 }

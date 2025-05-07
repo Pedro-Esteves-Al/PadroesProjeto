@@ -6,6 +6,6 @@ public class AdicionalBacon extends HamburguerDecorator {
     }
 
     public String getAdicional() {
-        return "Bacon";
+        return "bacon";
     }
 }

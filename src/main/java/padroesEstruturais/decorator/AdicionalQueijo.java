@@ -5,6 +5,6 @@ public class AdicionalQueijo extends HamburguerDecorator {
         super(ingrediente);
     }
     public String getAdicional() {
-        return "Queijo";
+        return "queijo";
     }
 }

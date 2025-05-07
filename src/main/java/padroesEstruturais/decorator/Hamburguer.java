@@ -1,7 +1,7 @@
 package padroesEstruturais.decorator;
 
 public class Hamburguer implements Ingrediente {
-    public String ingredientes;
+    private String ingredientes;
 
     public Hamburguer() {
 
