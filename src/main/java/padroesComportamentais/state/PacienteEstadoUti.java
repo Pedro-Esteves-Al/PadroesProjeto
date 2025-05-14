@@ -10,4 +10,13 @@ public class PacienteEstadoUti extends PacienteEstado{
     public String getEstado() {
         return "Encaminhado pra UTI";
     }
+
+    public boolean enviarIml(Paciente paciente) {
+        paciente.setEstado(PacienteEstadoIml.getInstance());
+        return true;
+    }
+    public boolean darAlta(Paciente paciente) {
+        paciente.setEstado(PacienteEstadoAlta.getInstance());
+        return true;
+    }
 }
