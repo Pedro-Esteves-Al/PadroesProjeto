@@ -1,17 +1,11 @@
 package padroesComportamentais.chainOfResponsibility;
 
 public class TipoDocumentoDiploma implements TipoDocumento {
-    private String tipo = "Diploma";
+    private static TipoDocumentoDiploma tipoDocumentoDiploma = new TipoDocumentoDiploma();
 
-    private TipoDocumentoDiploma() {}
+    private TipoDocumentoDiploma() {};
 
-    private static TipoDocumentoDiploma instance = new TipoDocumentoDiploma();
-    public static TipoDocumentoDiploma getInstance() {
-        return instance;
-    }
-
-
-    public String getTipo() {
-        return this.tipo;
+    public static TipoDocumentoDiploma getTipoDocumentoDiploma() {
+        return tipoDocumentoDiploma;
     }
 }

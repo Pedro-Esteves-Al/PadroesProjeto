@@ -1,16 +1,12 @@
 package padroesComportamentais.chainOfResponsibility;
 
 public class TipoDocumentoCertificado implements TipoDocumento {
-    private String tipo = "Certificado";
-    private TipoDocumentoCertificado() {}
 
-    private static TipoDocumentoCertificado instance = new TipoDocumentoCertificado();
-    public static TipoDocumentoCertificado getInstance() {
-        return instance;
-    }
+    private static TipoDocumentoCertificado tipoDocumentoCertificado = new TipoDocumentoCertificado();
 
+    private TipoDocumentoCertificado() {};
 
-    public String getTipo() {
-        return this.tipo;
+    public static TipoDocumentoCertificado getTipoDocumentoCertificado() {
+        return tipoDocumentoCertificado;
     }
 }

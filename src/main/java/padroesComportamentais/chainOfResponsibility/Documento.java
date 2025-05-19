@@ -10,4 +10,8 @@ public class Documento {
     public TipoDocumento getTipoDocumento() {
         return tipoDocumento;
     }
+
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
+    }
 }

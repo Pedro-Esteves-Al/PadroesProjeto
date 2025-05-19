@@ -1,16 +1,11 @@
 package padroesComportamentais.chainOfResponsibility;
 
 public class TipoDocumentoHistorico implements TipoDocumento {
-    private String tipo = "Historico";
-    private TipoDocumentoHistorico() {}
+    private static TipoDocumentoHistorico tipoDocumentoHistorico = new TipoDocumentoHistorico();
 
-    private static TipoDocumentoHistorico instance = new TipoDocumentoHistorico();
-    public static TipoDocumentoHistorico getInstance() {
-        return instance;
-    }
+    private TipoDocumentoHistorico() {};
 
-
-    public String getTipo() {
-        return this.tipo;
+    public static TipoDocumentoHistorico getTipoDocumentoHistorico() {
+        return tipoDocumentoHistorico;
     }
 }

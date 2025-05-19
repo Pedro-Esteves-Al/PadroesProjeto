@@ -4,20 +4,31 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Funcionario {
-    private Funcionario superior;
-    private ArrayList<TipoDocumento> documentoList = new ArrayList();
-    public Funcionario getSuperior() {
-        return superior;
+    protected ArrayList listaDocumentos = new ArrayList();
+    private Funcionario funcionarioSuperior;
+
+    public Funcionario getFuncionarioSuperior() {
+        return funcionarioSuperior;
     }
 
-    public ArrayList<TipoDocumento> getDocumentos() {
-        return documentoList;
-    }
-    public void setDocumentoList(ArrayList<TipoDocumento> documentoList) {
-        this.documentoList = documentoList;
+    public void setFuncionarioSuperior(Funcionario funcionarioSuperior) {
+        this.funcionarioSuperior = funcionarioSuperior;
     }
 
-    public void assinarDocumento() {
+    public abstract String getDescricaoCargo();
 
+    public String assinarDocumento(Documento documento) {
+        if (listaDocumentos.contains(documento.getTipoDocumento())) {
+            return getDescricaoCargo();
+        }
+        else {
+            if (funcionarioSuperior != null) {
+                return funcionarioSuperior.assinarDocumento(documento);
+            }
+            else
+            {
+                return "Sem assinatura";
+            }
+        }
     }
 }
